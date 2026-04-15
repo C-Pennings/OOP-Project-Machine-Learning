@@ -7,6 +7,7 @@
 
 void Interface::setClassifer(int type)
 {
+
 	switch (type)
 	{
 	case 1:
@@ -22,6 +23,8 @@ void Interface::setClassifer(int type)
 		std::cout << "Invalid classifier type" << std::endl;
 		classifier = nullptr;
 	}
+
+	std::cout << "Classifier set to type " << type << std::endl;
 }
 
 void Interface::loadTrainingData(std::string fileName)
@@ -34,6 +37,8 @@ void Interface::loadTrainingData(std::string fileName)
 	} else {
 		std::cout << "Please set a classifier before loading training data." << std::endl;
 	}
+
+	std::cout << "Training data loaded from " << fileName << std::endl;
 }
 
 void Interface::enterSampleData(double x, double y, double z)
@@ -86,30 +91,6 @@ void Interface::loadSampleData(std::string fileName)
 			Data result = classifier->classify(sample);
 			resultData.push_back(result);
 			std::string name;
-			switch (result.label) {
-				default:
-					name = "Unknown";
-					break;
-				case 1:
-					name = "Face Down";
-					break;
-				case 2:
-					name = "Face Up";
-					break;
-				case 3:
-					name = "Portrait Upside Down";
-					break;
-				case 4:
-					name = "Portrait Upright";
-					break;
-				case 5:
-					name = "Landscape Left";
-					break;
-				case 6:
-					name = "Landscape Right";
-					break;
-			}
-			std::cout << "Classification result for (" << result.x << ", " << result.y << ", " << result.z << "): " << name << " with label: " << result.label << std::endl;
 		} else {
 			std::cout << "Please set a classifier before loading sample data." << std::endl;
 			break;
@@ -118,6 +99,7 @@ void Interface::loadSampleData(std::string fileName)
 
 	resultDataFile.setData(resultData);
 	resultDataFile.saveToFile("results.txt");
+	std::cout << "Classification results saved to results.txt" << std::endl;
 }
 
 Interface::Interface() {
@@ -155,11 +137,11 @@ void Interface::run() {
 			case '2': {
 				double x, y, z;
 				std::cout << "Enter sample data: " << std::endl;
-				std::cout << "X: " << std::endl;
+				std::cout << "X: ";
 				std::cin >> x;
-				std::cout << "Y: " << std::endl;
+				std::cout << "Y: ";
 				std::cin >> y;
-				std::cout << "Z: " << std::endl;
+				std::cout << "Z: ";
 				std::cin >> z;
 				enterSampleData(x, y, z);
 				std::cout << std::endl;
@@ -176,7 +158,13 @@ void Interface::run() {
 				int type;
 				std::cout << "Enter classifier type (1: NN, 2: KNN, 3: Another): ";
 				std::cin >> type;
-				setClassifer(type);
+				if (type == 2 || type == 3) {
+					std::cout << "Warning: This classifier is not implemented yet. NN Classifer is the only one that works." << std::endl;
+				}
+				else {
+					setClassifer(type);
+				}
+				
 				break;
 			}
 			case '5': {
