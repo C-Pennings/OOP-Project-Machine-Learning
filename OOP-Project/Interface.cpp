@@ -3,6 +3,7 @@
 #include "NNClassifer.h"
 #include "KNNClassifer.h"
 #include <iostream>
+#include <string>
 
 void Interface::setClassifer(int type)
 {
@@ -26,6 +27,7 @@ void Interface::setClassifer(int type)
 void Interface::loadTrainingData(std::string fileName)
 {
 	trainingData.loadFromFile(fileName);
+
 	if (classifier != nullptr)
 	{
 		classifier->setTrainingData(trainingData.getData());
@@ -34,13 +36,37 @@ void Interface::loadTrainingData(std::string fileName)
 	}
 }
 
-void Interface::enterSampleData(int x, int y, int z)
+void Interface::enterSampleData(double x, double y, double z)
 {
 	Data sample = {x, y, z};
 	if (classifier != nullptr)
 	{
-		int result = classifier->classify(sample);
-		std::cout << "Classification result: " << result << std::endl;
+		Data result = classifier->classify(sample);
+		std::string name;
+		switch (result.label) {
+			default:
+				name = "Unknown";
+				break;
+			case 1:
+				name = "Face Down";
+				break;
+			case 2:
+				name = "Face Up";
+				break;
+			case 3:
+				name = "Portrait Upside Down";
+				break;
+			case 4:
+				name = "Portrait Upright";
+				break;
+			case 5:
+				name = "Landscape Left";
+				break;
+			case 6:
+				name = "Landscape Right";
+				break;
+			}
+		std::cout << "Classification result: " << name << std::endl;
 	} else {
 		std::cout << "Please set a classifier before entering sample data." << std::endl;
 	}
@@ -57,9 +83,33 @@ void Interface::loadSampleData(std::string fileName)
 	{
 		if (classifier != nullptr)
 		{
-			int result = classifier->classify(sample);
-			resultData.push_back({ result, sample.x, sample.y, sample.z });
-			std::cout << "Classification result for (" << sample.x << ", " << sample.y << ", " << sample.z << "): " << result << std::endl;
+			Data result = classifier->classify(sample);
+			resultData.push_back(result);
+			std::string name;
+			switch (result.label) {
+				default:
+					name = "Unknown";
+					break;
+				case 1:
+					name = "Face Down";
+					break;
+				case 2:
+					name = "Face Up";
+					break;
+				case 3:
+					name = "Portrait Upside Down";
+					break;
+				case 4:
+					name = "Portrait Upright";
+					break;
+				case 5:
+					name = "Landscape Left";
+					break;
+				case 6:
+					name = "Landscape Right";
+					break;
+			}
+			std::cout << "Classification result for (" << result.x << ", " << result.y << ", " << result.z << "): " << name << " with label: " << result.label << std::endl;
 		} else {
 			std::cout << "Please set a classifier before loading sample data." << std::endl;
 			break;
@@ -91,39 +141,45 @@ void Interface::run() {
 		std::cout << "4. Set classifier" << std::endl;
 		std::cout << "5. Exit" << std::endl;
 
-		int choice;
+		char choice;
 		std::cin >> choice;
 
 		switch (choice) {
-			case 1: {
+			case '1': {
 				std::string fileName;
 				std::cout << "Enter training data file name: ";
 				std::cin >> fileName;
 				loadTrainingData(fileName);
 				break;
 			}
-			case 2: {
-				int x, y, z;
-				std::cout << "Enter sample data (x y z): ";
-				std::cin >> x >> y >> z;
+			case '2': {
+				double x, y, z;
+				std::cout << "Enter sample data: " << std::endl;
+				std::cout << "X: " << std::endl;
+				std::cin >> x;
+				std::cout << "Y: " << std::endl;
+				std::cin >> y;
+				std::cout << "Z: " << std::endl;
+				std::cin >> z;
 				enterSampleData(x, y, z);
+				std::cout << std::endl;
 				break;
 			}
-			case 3: {
+			case '3': {
 				std::string fileName;
 				std::cout << "Enter sample data file name: ";
 				std::cin >> fileName;
 				loadSampleData(fileName);
 				break;
 			}
-			case 4: {
+			case '4': {
 				int type;
 				std::cout << "Enter classifier type (1: NN, 2: KNN, 3: Another): ";
 				std::cin >> type;
 				setClassifer(type);
 				break;
 			}
-			case 5: {
+			case '5': {
 				running = false;
 				break;
 			}

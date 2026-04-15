@@ -5,6 +5,6 @@ class KNNClassifer : public Classifer
 public:
 	KNNClassifer();
 	~KNNClassifer();
-	int classify(Data sample) override;
+	Data classify(Data sample) override;
 };
 

@@ -2,9 +2,9 @@
 #include <iostream>
 #include <cmath>
 
-int NNClassifer::classify(Data sample) {
+Data NNClassifer::classify(Data sample) {
 	int label = -1;
-	double minDistance = 1;
+	double minDistance = 1e9;
 
 	for (auto& data : trainingData) {
 		double distance = 
@@ -14,10 +14,13 @@ int NNClassifer::classify(Data sample) {
 
 		if (distance < minDistance) {
 			label = data.label;
+			minDistance = distance;
 		}
 	}
 
-	return label;
+	sample.label = label;
+
+	return sample;
 }
 
 NNClassifer::NNClassifer() {

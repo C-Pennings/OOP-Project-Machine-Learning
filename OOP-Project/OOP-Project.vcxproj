@@ -137,6 +137,7 @@
     <ClCompile Include="FileData.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="KNNClassifer.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="NNClassifer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

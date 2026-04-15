@@ -5,6 +5,6 @@ class AnotherClassifer : public Classifer
 	public:
 	AnotherClassifer();
 	~AnotherClassifer();
-	int classify(Data sample) override;
+	Data classify(Data sample) override;
 };
 

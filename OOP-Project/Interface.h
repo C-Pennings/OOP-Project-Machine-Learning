@@ -12,7 +12,7 @@ public:
 	Interface();
 	~Interface();
 	void loadTrainingData(std::string fileName);
-	void enterSampleData(int x, int y, int z);
+	void enterSampleData(double x, double y, double z);
 	void setClassifer(int type);
 	void loadSampleData(std::string fileName);
 	void run();

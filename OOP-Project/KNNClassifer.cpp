@@ -1,9 +1,10 @@
 #include "KNNClassifer.h"
 #include <iostream>
 
-int KNNClassifer::classify(Data sample) {
+Data KNNClassifer::classify(Data sample) {
 	std::cout << "KNNClassifer Not Implemented Yet: Returning -1" << std::endl;
-	return -1;
+	sample.label = -1;
+	return sample;
 }
 
 KNNClassifer::KNNClassifer() {

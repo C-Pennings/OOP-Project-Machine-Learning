@@ -1,9 +1,10 @@
 #include "AnotherClassifer.h"
 #include <iostream>
 
-int AnotherClassifer::classify(Data sample) {
+Data AnotherClassifer::classify(Data sample) {
 	std::cout << "AnotherClassifer Not Implemented Yet: Returning -1" << std::endl;
-	return -1;
+	sample.label = -1;
+	return sample;
 }
 
 AnotherClassifer::AnotherClassifer() {

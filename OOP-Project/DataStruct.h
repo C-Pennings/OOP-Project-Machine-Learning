@@ -1,7 +1,8 @@
 #pragma once
+#include <string>
+
 typedef struct Data {
 	int label;
-	std::string name;
 	double x;
 	double y;
 	double z;
@@ -9,3 +10,4 @@ typedef struct Data {
 	Data(int l, double xVal, double yVal, double zVal) : label(l), x(xVal), y(yVal), z(zVal) {}
 	Data(double xVal, double yVal, double zVal) : label(0), x(xVal), y(yVal), z(zVal) {}
 } Data;
+

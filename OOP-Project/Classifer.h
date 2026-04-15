@@ -9,6 +9,6 @@ public:
 	Classifer();
 	~Classifer();
 	void setTrainingData(std::vector<Data> data);
-	virtual int classify(Data sample) = 0;
+	virtual Data classify(Data sample) = 0;
 };
 

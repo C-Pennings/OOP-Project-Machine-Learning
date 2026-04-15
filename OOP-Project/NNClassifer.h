@@ -5,6 +5,6 @@ class NNClassifer : public Classifer
 public:
 	NNClassifer();
 	~NNClassifer();
-	int classify(Data sample) override;
+	Data classify(Data sample) override;
 };
 
