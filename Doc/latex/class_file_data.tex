@@ -1,0 +1,148 @@
+\doxysection{File\+Data Class Reference}
+\hypertarget{class_file_data}{}\label{class_file_data}\index{FileData@{FileData}}
+
+
+This file loads and saves file.  
+
+
+
+
+{\ttfamily \+\#include $<$File\+Data.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_file_data_a0f2661c8f8b2bcb2af66038857924d5c}{load\+From\+File}} (std::\+string file\+Name)
+\begin{DoxyCompactList}\small\item\em Loads data from txt file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_file_data_a9e986db3c665c19f4bc789fb2e6bd8f0}{save\+To\+File}} (std::\+string file\+Name)
+\begin{DoxyCompactList}\small\item\em Saves data to txt file. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_data}{Data}} $>$ \doxymbox{\hyperlink{class_file_data_ad50b0ef6cd549d862a8fa8326ced3af0}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Get the stored data. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_file_data_ac2ec277abed823dd3f1de821af62493f}{set\+Data}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_data}{Data}} $>$ data)
+\begin{DoxyCompactList}\small\item\em Set the stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file loads and saves file. 
+
+This file holds the \doxylink{class_file_data}{File\+Data} class which can save and load data from txt files and then stores or input from strings and vectors. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026
+\end{DoxyDate}
+This class loads and save txt files
+
+This class has functions to load and save data from txt files as well as a way to store and retrieve the data in the system. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{class_file_data_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_file_data_ad50b0ef6cd549d862a8fa8326ced3af0}\index{FileData@{FileData}!getData@{getData}}
+\index{getData@{getData}!FileData@{FileData}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \label{class_file_data_ad50b0ef6cd549d862a8fa8326ced3af0} 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_data}{Data}} $>$ File\+Data::\+get\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the stored data. 
+
+Returns the data vector that is stored in the class. 
+\begin{DoxyParams}{Parameters}
+{\em N/\+A} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The data vector stored in the class. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_file_data_a0f2661c8f8b2bcb2af66038857924d5c}\index{FileData@{FileData}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!FileData@{FileData}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{class_file_data_a0f2661c8f8b2bcb2af66038857924d5c} 
+void File\+Data::\+load\+From\+File (\begin{DoxyParamCaption}\item[{std::\+string}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Loads data from txt file. 
+
+This function takes a file\+Name input and then loads the data from the file in to the data vect.\+or. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the file you want the data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_file_data_a9e986db3c665c19f4bc789fb2e6bd8f0}\index{FileData@{FileData}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!FileData@{FileData}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily \label{class_file_data_a9e986db3c665c19f4bc789fb2e6bd8f0} 
+void File\+Data::\+save\+To\+File (\begin{DoxyParamCaption}\item[{std::\+string}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Saves data to txt file. 
+
+This function takes a file\+Name input and then saves data from the data vector to the file. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the file you want to save the data to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_file_data_ac2ec277abed823dd3f1de821af62493f}\index{FileData@{FileData}!setData@{setData}}
+\index{setData@{setData}!FileData@{FileData}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily \label{class_file_data_ac2ec277abed823dd3f1de821af62493f} 
+void File\+Data::\+set\+Data (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_data}{Data}} $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Set the stored data. 
+
+This function lets you input a data vector to be stored in the class. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data vector you want to store in the class. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+toews/\+source/\+repos/\+\+OOP-\/\+Project-\/\+Machine-\/\+Learning/\+\+OOP-\/\+Project/\+File\+Data.\+h\item 
+C:\+/\+\+Users/\+toews/\+source/\+repos/\+\+OOP-\/\+Project-\/\+Machine-\/\+Learning/\+\+OOP-\/\+Project/\+File\+Data.\+cpp\end{DoxyCompactItemize}

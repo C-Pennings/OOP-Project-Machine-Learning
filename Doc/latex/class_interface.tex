@@ -1,0 +1,219 @@
+\doxysection{Interface Class Reference}
+\hypertarget{class_interface}{}\label{class_interface}\index{Interface@{Interface}}
+
+
+This file holds the interface class.  
+
+
+
+
+{\ttfamily \+\#include $<$Interface.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}{Interface}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_interface}{Interface} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_interface_a19179888f29f18f1be54a3dfe98f68c0}{\texorpdfstring{$\sim$}{\string~}\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_interface}{Interface} class. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_interface_a999245a004304981fa7aa7cc7ed75747}{load\+Training\+Data}} (std::\+string file\+Name)
+\begin{DoxyCompactList}\small\item\em Load training data from a file. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_interface_a226fcdaa1c6d01ec5114b769577b6cf0}{enter\+Sample\+Data}} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Enter sample data manually. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_interface_a37375999c98742d5b7b1767e392f5d77}{set\+Classifer}} (int type)
+\begin{DoxyCompactList}\small\item\em Choose which classifer will be used. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_interface_a5f0b62be254edd9881c6705a3f360ec9}{load\+Sample\+Data}} (std::\+string file\+Name)
+\begin{DoxyCompactList}\small\item\em This function loads sample data from a file instead of user input. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_interface_a090a950300a463d91f8f361d3b333906}{run}} ()
+\begin{DoxyCompactList}\small\item\em Main menu function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file holds the interface class. 
+
+This class is used to display a text based interface that connects classifers and file saving/\+loading + others. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026
+\end{DoxyDate}
+This class is used to display a text based interface.
+
+The user is able to use the text based interface to load training data, enter user input sample data, load sample data from a file, and switch which classifer will be used. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+\label{doc-constructors}
+\Hypertarget{class_interface_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1}\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}}
+{\footnotesize\ttfamily \label{class_interface_a4406d74c75bdfe150bf72be1f1cda8b1} 
+Interface::\+\+Interface (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_interface}{Interface} class. 
+
+Sets classifier to nullptr. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_interface_a19179888f29f18f1be54a3dfe98f68c0}\index{Interface@{Interface}!````~Interface@{\texorpdfstring{$\sim$}{\string~}Interface}}
+\index{````~Interface@{\texorpdfstring{$\sim$}{\string~}Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Interface()}{\string~Interface()}}
+{\footnotesize\ttfamily \label{class_interface_a19179888f29f18f1be54a3dfe98f68c0} 
+Interface::\+\texorpdfstring{$\sim$}{\string~}\+Interface (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_interface}{Interface} class. 
+
+Cleans up any allocated resources. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{class_interface_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_interface_a226fcdaa1c6d01ec5114b769577b6cf0}\index{Interface@{Interface}!enterSampleData@{enterSampleData}}
+\index{enterSampleData@{enterSampleData}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{enterSampleData()}{enterSampleData()}}
+{\footnotesize\ttfamily \label{class_interface_a226fcdaa1c6d01ec5114b769577b6cf0} 
+void Interface::\+enter\+Sample\+Data (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{, }\item[{double}]{z}{}\end{DoxyParamCaption})}
+
+
+
+Enter sample data manually. 
+
+This function takes in x, y, and z values for a sample data point. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x value for the sample data point. \\
+\hline
+{\em y} & The y value for the sample data point. \\
+\hline
+{\em z} & The z value for the sample data point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_interface_a5f0b62be254edd9881c6705a3f360ec9}\index{Interface@{Interface}!loadSampleData@{loadSampleData}}
+\index{loadSampleData@{loadSampleData}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadSampleData()}{loadSampleData()}}
+{\footnotesize\ttfamily \label{class_interface_a5f0b62be254edd9881c6705a3f360ec9} 
+void Interface::\+load\+Sample\+Data (\begin{DoxyParamCaption}\item[{std::\+string}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+This function loads sample data from a file instead of user input. 
+
+This function takes a file name and then loads the sample data from that file. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file that holds the sample data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_interface_a999245a004304981fa7aa7cc7ed75747}\index{Interface@{Interface}!loadTrainingData@{loadTrainingData}}
+\index{loadTrainingData@{loadTrainingData}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadTrainingData()}{loadTrainingData()}}
+{\footnotesize\ttfamily \label{class_interface_a999245a004304981fa7aa7cc7ed75747} 
+void Interface::\+load\+Training\+Data (\begin{DoxyParamCaption}\item[{std::\+string}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Load training data from a file. 
+
+This function loads training data from the specified file into the classifer set\+Training\+Data function. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to load the training data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_interface_a090a950300a463d91f8f361d3b333906}\index{Interface@{Interface}!run@{run}}
+\index{run@{run}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_interface_a090a950300a463d91f8f361d3b333906} 
+void Interface::\+run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main menu function. 
+
+Function that displays the main menu and gets user inputs for selecting what they want to do. 
+\begin{DoxyParams}{Parameters}
+{\em N/\+A} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_interface_a37375999c98742d5b7b1767e392f5d77}\index{Interface@{Interface}!setClassifer@{setClassifer}}
+\index{setClassifer@{setClassifer}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{setClassifer()}{setClassifer()}}
+{\footnotesize\ttfamily \label{class_interface_a37375999c98742d5b7b1767e392f5d77} 
+void Interface::\+set\+Classifer (\begin{DoxyParamCaption}\item[{int}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Choose which classifer will be used. 
+
+This function sets the classifier type based on the user input. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of classifier to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+toews/\+source/\+repos/\+\+OOP-\/\+Project-\/\+Machine-\/\+Learning/\+\+OOP-\/\+Project/\+Interface.\+h\item 
+C:\+/\+\+Users/\+toews/\+source/\+repos/\+\+OOP-\/\+Project-\/\+Machine-\/\+Learning/\+\+OOP-\/\+Project/\+Interface.\+cpp\end{DoxyCompactItemize}

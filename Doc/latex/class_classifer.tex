@@ -1,0 +1,153 @@
+\doxysection{Classifer Class Reference}
+\hypertarget{class_classifer}{}\label{class_classifer}\index{Classifer@{Classifer}}
+
+
+This file holds the base class for all classifiers.  
+
+
+
+
+{\ttfamily \+\#include $<$Classifer.\+h$>$}
+
+Inheritance diagram for Classifer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_classifer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_classifer_ac742d7f4025807eabde3e7d8e6c655c7}{Classifer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_classifer}{Classifer} class. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_classifer_a0dd018e2316abe4c55c8462586dbd838}{\texorpdfstring{$\sim$}{\string~}\+Classifer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_classifer}{Classifer} class. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_classifer_a3f23c0594984a9b5c33b6d9e0dc42a94}{set\+Training\+Data}} (std::\+vector$<$ \doxymbox{\hyperlink{struct_data}{Data}} $>$ data)
+\begin{DoxyCompactList}\small\item\em Function to input the training data for classifiers. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{struct_data}{Data}} \doxymbox{\hyperlink{class_classifer_a51372e6219779eb15e54a1694b413d14}{classify}} (\doxymbox{\hyperlink{struct_data}{Data}} sample)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function for classifying data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_classifer_a961d373b5270b5c1e92168c807a86a27}\label{class_classifer_a961d373b5270b5c1e92168c807a86a27} 
+std::\+vector$<$ \doxymbox{\hyperlink{struct_data}{Data}} $>$ {\bfseries training\+Data}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file holds the base class for all classifiers. 
+
+The file uses vectors include for storing data. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026
+\end{DoxyDate}
+This class is the base class for all classifiers.
+
+This base class has a vector to hold the training data as well as a pure virtual function used for classifying the data. The classify function allows all subclasses to classify the data in its own way. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+\label{doc-constructors}
+\Hypertarget{class_classifer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_classifer_ac742d7f4025807eabde3e7d8e6c655c7}\index{Classifer@{Classifer}!Classifer@{Classifer}}
+\index{Classifer@{Classifer}!Classifer@{Classifer}}
+\doxysubsubsection{\texorpdfstring{Classifer()}{Classifer()}}
+{\footnotesize\ttfamily \label{class_classifer_ac742d7f4025807eabde3e7d8e6c655c7} 
+Classifer::\+\+Classifer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_classifer}{Classifer} class. 
+
+The base constructor does not do anything because the class is ment to be a base class and is not meant to be used on its own. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+\Hypertarget{class_classifer_a0dd018e2316abe4c55c8462586dbd838}\index{Classifer@{Classifer}!````~Classifer@{\texorpdfstring{$\sim$}{\string~}Classifer}}
+\index{````~Classifer@{\texorpdfstring{$\sim$}{\string~}Classifer}!Classifer@{Classifer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Classifer()}{\string~Classifer()}}
+{\footnotesize\ttfamily \label{class_classifer_a0dd018e2316abe4c55c8462586dbd838} 
+Classifer::\+\texorpdfstring{$\sim$}{\string~}\+Classifer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_classifer}{Classifer} class. 
+
+The base destructor does not do anything because the class is ment to be a base class and is not meant to be used on its own. \begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{class_classifer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_classifer_a51372e6219779eb15e54a1694b413d14}\index{Classifer@{Classifer}!classify@{classify}}
+\index{classify@{classify}!Classifer@{Classifer}}
+\doxysubsubsection{\texorpdfstring{classify()}{classify()}}
+{\footnotesize\ttfamily \label{class_classifer_a51372e6219779eb15e54a1694b413d14} 
+virtual \doxymbox{\hyperlink{struct_data}{Data}} Classifer::\+classify (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_data}{Data}}}]{sample}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function for classifying data. 
+
+This function is used to find what direction the phone is facing. 
+\begin{DoxyParams}{Parameters}
+{\em sample} & This is the data point that will be checked to see what direction the phone is facing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the data point with a set label. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+Implemented in \doxymbox{\hyperlink{class_another_classifer_a48de1380fb71c5c05fc36f2dc7d8e921}{Another\+Classifer}}, \doxymbox{\hyperlink{class_k_n_n_classifer_a3d5052aca6d8402522bdcb61ce15e2fe}{KNNClassifer}}, and \doxymbox{\hyperlink{class_n_n_classifer_a661d2857eae8ee67ebaf4795d305a74c}{NNClassifer}}.
+
+\Hypertarget{class_classifer_a3f23c0594984a9b5c33b6d9e0dc42a94}\index{Classifer@{Classifer}!setTrainingData@{setTrainingData}}
+\index{setTrainingData@{setTrainingData}!Classifer@{Classifer}}
+\doxysubsubsection{\texorpdfstring{setTrainingData()}{setTrainingData()}}
+{\footnotesize\ttfamily \label{class_classifer_a3f23c0594984a9b5c33b6d9e0dc42a94} 
+void Classifer::\+set\+Training\+Data (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{struct_data}{Data}} $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Function to input the training data for classifiers. 
+
+This function is used for all classifiers class to input the training data. 
+\begin{DoxyParams}{Parameters}
+{\em data} & This is a vector of Data\+Structs that is used to input and store the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/\+A 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Charlie 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4/\+15/\+2026 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+toews/\+source/\+repos/\+\+OOP-\/\+Project-\/\+Machine-\/\+Learning/\+\+OOP-\/\+Project/\+Classifer.\+h\item 
+C:\+/\+\+Users/\+toews/\+source/\+repos/\+\+OOP-\/\+Project-\/\+Machine-\/\+Learning/\+\+OOP-\/\+Project/\+Classifer.\+cpp\end{DoxyCompactItemize}
