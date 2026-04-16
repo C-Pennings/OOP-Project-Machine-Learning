@@ -3,10 +3,6 @@
 #include <fstream>
 #include <sstream>
 
-FileData::FileData() {}
-
-FileData::~FileData() {}
-
 void FileData::loadFromFile(std::string fileName) {
 	std::ifstream file(fileName);
 	if (!file.is_open()) {
